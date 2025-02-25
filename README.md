@@ -27,7 +27,7 @@ int estaLlena(Pila *p) {
 // Función para agregar un elemento a la pila
 void push(Pila *p, int valor) {
     if (estaLlena(p)) {
-        printf("Error: la pila está llena\n");
+        printf("Error, la pila está llena\n");
         return;
     }
     p->tope++;
@@ -37,7 +37,7 @@ void push(Pila *p, int valor) {
 // Función para sacar un elemento de la pila
 int pop(Pila *p) {
     if (estaVacia(p)) {
-        printf("Error: la pila está vacía\n");
+        printf("Error, la pila está vacía\n");
         return -1; 
     }
     int valor = p->datos[p->tope];
@@ -48,7 +48,7 @@ int pop(Pila *p) {
 // Función para ver el elemento en la cima sin sacarlo
 int peek(Pila *p) {
     if (estaVacia(p)) {
-        printf("Error: la pila está vacía\n");
+        printf("Error, la pila está vacía\n");
         return -1;
     }
     return p->datos[p->tope];
@@ -59,9 +59,9 @@ int main() {
     Pila miPila;
     inicializar(&miPila);
 
-    push(&miPila, 10);
-    push(&miPila, 20);
-    push(&miPila, 30);
+    push(&miPila, 15);
+    push(&miPila, 25);
+    push(&miPila, 35);
 
     printf("Elemento en la cima: %d\n", peek(&miPila));
 
